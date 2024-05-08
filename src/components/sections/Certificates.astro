@@ -1,0 +1,64 @@
+---
+import Section from "../Section.astro"
+import { certificates } from "@cv"
+---
+
+<Section title="Certificados">
+  <ul>
+    {
+      certificates.map(({ name, date, url, issuer, summary }) => {
+        const startYear = new Date(date).getFullYear()
+        return (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <h3>
+                    <a  class="font-semibold" href="https://www.credly.com/badges/2493bbdb-becf-44be-94bf-1a2f104911ce/linked_in_profile?trk=public_profile_see-credential" title="Da clic para ver la credencial" target="_blank" rel="noopener noreferrer">{name}</a>
+                    </h3>
+                  <p>{issuer}</p>
+                </div>
+                <div>
+                  <time>{startYear}</time>
+                </div>
+              </header>
+              <footer>
+                <p class="mt-2">{summary}</p>
+              </footer>
+            </article>
+          </li>
+        )
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: #646464;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: #555;
+    font-size: 0.85rem;
+  }
+
+  @media (width <= 700px) {
+    time {
+      text-align: right;
+    }
+  }
+</style>
