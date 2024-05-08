@@ -12,7 +12,7 @@ La inspiración para este proyecto proviene del portafolio de Bartosz Jarocki en
 - Tailwind CSS: Empleado para estilizar la página web, asegurando un diseño moderno y adaptable.
 - CSS3: Se implementaron características adicionales de estilo utilizando CSS3 para mejorar el atractivo visual y la personalización.
 - JavaScript: Utilizado para la manipulación de contenido dinámico e interactividad dentro de la página web.
-- JSON: Los datos se estructuran en formato JSON para una gestión y recuperación sencillas.
+- JSON: Los datos se estructuran en formato JSON para una gestión y recuperación sencilla.
 
 ## Características
 
