@@ -4,26 +4,24 @@ import { certificates } from "@cv"
 ---
 
 <Section title="Certificados">
-  <ul>
+  <ul class="flex flex-col">
     {
-      certificates.map(({ name, date, url, issuer, summary }) => {
+      certificates.map(({ name, date, issuer, summary }) => {
         const startYear = new Date(date).getFullYear()
         return (
           <li>
             <article>
-              <header>
+              <header class="flex justify-between items-start">
                 <div>
-                  <h3>
-                    <a  class="font-semibold" href="https://www.credly.com/badges/2493bbdb-becf-44be-94bf-1a2f104911ce/linked_in_profile?trk=public_profile_see-credential" title="Da clic para ver la credencial" target="_blank" rel="noopener noreferrer">{name}</a>
-                    </h3>
-                  <p>{issuer}</p>
+                  <h3 class="font-bold mt-2 text-lg text-gray-500 lg:text-xl">{name}</h3>
                 </div>
-                <div>
-                  <time>{startYear}</time>
-                </div>
+
+                <time class="text-gray-400 text-base lg:text-xl">{startYear}</time>
               </header>
+
               <footer>
-                <p class="mt-2">{summary}</p>
+                <p class="mt-2 font-semibold text-gray-400 lg:text-xl">{issuer}</p>
+                <p class="mt-2 lg:text-xl">{summary}</p>
               </footer>
             </article>
           </li>
@@ -34,27 +32,6 @@ import { certificates } from "@cv"
 </Section>
 
 <style>
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #646464;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-  }
 
   @media (width <= 700px) {
     time {

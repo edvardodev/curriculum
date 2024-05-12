@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Eduardo Sebastian Sánchez Torres",
-    "firstName": "Eduardo",
+    "shortName": "Eduardo Sánchez",
     "label": "Desarrollador de Software",
     "image": "https://avatars.githubusercontent.com/u/149343665?v=4",
     "email": "edvardodev@gmail.com",
@@ -59,18 +59,19 @@
     "area": "Ingeniería en línea en Diseño de Software y Redes",
     "studyType": "Licenciatura",
     "startDate": "2023-09-01",
-    "summary": "Es un programa virtual que forma profesionales en desarrollo de software y gestión de redes. Ofrece flexibilidad para estudiar desde cualquier lugar con acceso a internet, cubriendo áreas como programación, seguridad informática y gestión de redes. Esta modalidad permite a los estudiantes adaptar sus estudios a sus horarios personales y profesionales.",
+    "summary": "Es un programa virtual que forma profesionales en desarrollo de software y gestión de redes. Ofrece flexibilidad para estudiar desde cualquier lugar con acceso a internet, cubriendo áreas como programación, seguridad informática y gestión de redes.",
     "endDate": null,
     "score": "9.7"
   }],
   "courses": [
     {
       "platform": "Platzi",
-      "summary": "En esta plataforma, partiendo desde los fundamentos de la programación, adquirí un dominio sólido en JavaScript, destacándome en el uso de React.js para la creación de interfaces de usuario dinámicas y eficientes. Además, me adentré en el desarrollo web con PHP y exploré su sintaxis, especialmente con el framework Laravel. Integré estas habilidades con herramientas como Tailwind y Bootstrap para un diseño web moderno y adaptable. En cuanto a la gestión de datos, trabajé con bases de datos tanto MySQL como PostgreSQL. También perfeccioné mis habilidades en control de versiones con Git y GitHub, asegurando una colaboración efectiva en proyectos de desarrollo."
+      "typePlatform":"Plataforma de cursos online",
+      "summary": "En esta plataforma, aprendí los fundamentos de la programación, adquirí un dominio sólido en JavaScript, destacándome en el uso de React.js y Astro para la creación de interfaces de usuario dinámicas y eficientes. Además, me adentré en el desarrollo web con PHP y exploré su sintaxis, especialmente con el framework Laravel. Integré estas habilidades con herramientas como Tailwind y Bootstrap para un diseño web moderno y adaptable. En cuanto a la gestión de datos, trabajé con bases de datos tanto MySQL como PostgreSQL. También perfeccioné mis habilidades en control de versiones con Git y GitHub, asegurando una colaboración efectiva en proyectos de desarrollo."
     },
     {
       "platform": "Udemy",
-      "startDate": "2021-05-01",
+      "typePlatform":"Plataforma de cursos online",
       "summary": "A través de Udemy, fortalecí mis habilidades en JavaScript y PHP, centrándome en el desarrollo web con énfasis en JavaScript y sus frameworks. Especializado en React.js, me concentré en la creación de aplicaciones de una sola página (SPA) y en la manipulación eficiente del DOM. Además, adquirí experiencia en Linux (Ubuntu), empleando sus herramientas para el desarrollo web, la administración de servidores y la configuración de entornos de desarrollo. En PHP, los cursos me brindaron una comprensión avanzada del lenguaje, incluyendo el manejo de sesiones, validación de formularios e interacción con bases de datos MySQL."
     }
   ],
@@ -79,7 +80,7 @@
     "date": "2023-12-15",
     "issuer": "Cisco",
     "url": "https://www.credly.com/badges/2493bbdb-becf-44be-94bf-1a2f104911ce/linked_in_profile",
-    "summary": "IT Essentials, una certificación ofrecida por Cisco, proporciona una base sólida en conceptos fundamentales de tecnología de la información y habilidades prácticas necesarias para roles de soporte técnico. Cubriendo temas como hardware, software, redes y seguridad, esta certificación es esencial para aquellos que buscan ingresar al campo de la tecnología o avanzar en sus carreras en TI."
+    "summary": "IT Essentials, es una certificación ofrecida por Cisco, proporciona una base sólida en conceptos fundamentales de tecnología de la información y habilidades prácticas necesarias para roles de soporte técnico. Cubriendo temas como hardware, software, redes y seguridad."
   }],
   "skills": [
     {

@@ -11,6 +11,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.3.2)(tailwindcss@3.4.3)
+  '@fontsource-variable/raleway':
+    specifier: ^5.0.20
+    version: 5.0.20
   '@fontsource-variable/syne':
     specifier: ^5.0.20
     version: 5.0.20
@@ -613,6 +616,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/raleway@5.0.20:
+    resolution: {integrity: sha512-KXXL81z1GexSxIGD78DnuYGPixRGrUTP0F5uzLIB+0ugPYEv1UW+s8d/NtsCAjYR1pfuN0gXNBAzwwFxMqLZbA==}
+    dev: false
 
   /@fontsource-variable/syne@5.0.20:
     resolution: {integrity: sha512-zgOO2wPd0mOnJI+/DxO8OM6j4tNy8IaKQS35sdN/4eMrV17RV61lqkWGvRlX87PYATNw43a7bRWfTyGUt0VlZA==}

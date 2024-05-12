@@ -4,56 +4,25 @@ import { courses } from "@cv"
 ---
 
 <Section title="Cursos">
-  <ul>
+  <ul class="flex flex-col gap-4 mb-4">
     {
-      courses.map(({ platform, summary }) => {
+      courses.map(({ platform, summary, typePlatform }) => {
         return (
-          <li>
+        <li>
             <article>
-              <header>
+              <header class="flex justify-between items-center">
                 <div>
-                  <h3  class="font-semibold">{platform}</h3>
+                  <h3 class="font-bold mt-2 text-lg text-gray-500 lg:text-xl">{platform}</h3>
                 </div>
               </header>
               <footer>
-                <p class="mt-2">{summary}</p>
+                <p class="mt-2 font-semibold text-gray-400 lg:text-xl">{typePlatform}</p>
+                <p class="mt-2 lg:text-xl">{summary}</p>
               </footer>
             </article>
           </li>
         )
       })
     }
-  </ul>
+  </ul">
 </Section>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  article h3 {
-    color: #646464;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  footer p:first-child{
-    margin-bottom: 16px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>

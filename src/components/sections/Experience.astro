@@ -5,7 +5,7 @@ import { work } from "@cv"
 ---
 
 <Section title="Experiencia laboral">
-  <ul>
+  <ul class="flex flex-col gap-4">
     {
       work.map(
         ({ name, startDate, endDate, position, summary, highlights, url }) => {
@@ -16,19 +16,21 @@ import { work } from "@cv"
           return (
             <li>
               <article>
-                <header>
+                <header class="flex justify-between items-end">
                   <div>
-                    <h4 class="font-semibold">{position}</h4>
-                    <p>{name}</p>
+                    <h3 class="font-bold mt-2 text-lg text-gray-500 lg:text-xl">{name}</h4>
+                    <p class="mt-2 font-semibold text-gray-400 lg:text-xl">{position}</p>
                   </div>
                   <div>
-                    <time 
+                    <time
+                      class="text-gray-400 text-base min-w-25 cursor-default lg:text-xl" 
                       datetime={startDate}
                       data-title={startDate}>
                         {startYear}
                     </time>
                     {" - "}
-                    <time 
+                    <time
+                      class="text-gray-400 text-base min-w-25 cursor-default lg:text-xl" 
                       datetime={endDate}
                       data-title={endDate}>
                         {endYear}
@@ -37,7 +39,7 @@ import { work } from "@cv"
                 </header>
 
                 <footer>
-                  <p>{summary}</p>
+                  <p class="mt-2 lg:text-xl">{summary}</p>
                 </footer>
               </article>
             </li>
@@ -49,42 +51,6 @@ import { work } from "@cv"
 </Section>
 
 <style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #646464;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 5px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-    cursor: default;
-  }
 
   [data-title]:hover:after {
     opacity: 1;

@@ -4,58 +4,52 @@ import { education } from "@cv"
 ---
 
 <Section title="Educación">
-  <ul>
+  <ul class="flex flex-col" >
     {
-      education.map(({ institution, startDate, endDate, area, summary }) => {
-        const startYear = new Date(startDate).getFullYear()
-        const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual"
-        const years = `${startYear} - ${endYear}`
-      
-        return (
-          <li>
-            <article>
-              <header >
-                <div>
-                  <h3 class="font-semibold">{institution}</h3>
-                </div>
+      education.map(
+        ({ institution, startDate, endDate, area, summary }) => {
+          const startYear = new Date(startDate).getFullYear()
+          const endYear =
+            endDate != null ? new Date(endDate).getFullYear() : "Actual"
 
-                <time>{years}</time>
-              </header>
+          return (
+            <li>
+              <article>
+                <header class="flex justify-between items-end">
+                  <div>
+                    <h3 class="font-bold mt-2 text-lg text-gray-500 lg:text-xl">{institution}</h3>
+                    <p class="mt-2 font-semibold text-gray-400 lg:text-xl">{area}</p>
+                  </div>
+                  <div>
+                      <time
+                        class="text-gray-400 text-base min-w-25 cursor-default lg:text-xl" 
+                        datetime={startDate}
+                        data-title={startDate}>
+                          {startYear}
+                      </time>
+                      {" - "}
+                      <time
+                        class="text-gray-400 text-base min-w-25 cursor-default lg:text-xl" 
+                        datetime={endDate}
+                        data-title={endDate}>
+                          {endYear}
+                      </time>
+                  </div>
+                </header>
 
-              <footer>
-                <p>{area}</p>
-                <p class="mt-2">{summary}</p>
-              </footer>
-            </article>
-          </li>
-        )
-      })
+                <footer>
+                  <p class="mt-2 lg:text-xl">{summary}</p>
+                </footer>
+              </article>
+            </li>
+          )
+        }
+      )
     }
   </ul>
 </Section>
 
 <style>
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  article h3 {
-    color: #646464;;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-  }
-
   @media (width <= 700px) {
     time {
       text-align: right;
