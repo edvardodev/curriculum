@@ -1,21 +1,21 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
 
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import PHP from "@/icons/php.astro"
-import Laravel from "@/icons/laravel.astro"
-import Bootstrap from "@/icons/Bootstrap.astro"
-import PostgreSQL from "@/icons/postgresql.astro"
-import AstroJs from "@/icons/logoastro.astro"
+import AstroJs from "@/icons/logoastro.astro";
+import Bootstrap from "@/icons/Bootstrap.astro";
+import CSS from "@/icons/css.astro";
+import Git from "@/icons/git.astro";
+import GitHub from "@/icons/GitHub.astro";
+import HTML from "@/icons/html.astro";
+import JavaScript from "@/icons/javascript.astro";
+import Laravel from "@/icons/laravel.astro";
+import MySQL from "@/icons/sql.astro";
+import PHP from "@/icons/php.astro";
+import PostgreSQL from "@/icons/postgresql.astro";
+import Tailwind from "@/icons/tailwind.astro";
+import TypeScript from "@/icons/type.astro";
 
-import { skills } from "@cv"
+import { skills } from "@cv";
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -30,22 +30,22 @@ const SKILLS_ICONS: Record<string, any> = {
   Laravel,
   Bootstrap,
   PostgreSQL,
-  AstroJs
-}
+  AstroJs,
+};
 ---
 
 <Section title="Habilidades">
-  <ul class="mt-4 inline-flex gap-2 flex-wrap">
+  <ul class="inline-flex gap-2 flex-wrap mt-2">
     {
       skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
-        const Icon = SKILLS_ICONS[iconName]
+        const iconName = name === "Next.js" ? "Next" : name;
+        const Icon = SKILLS_ICONS[iconName];
 
         return (
-          <li class="items-center bg-gray-100 rounded-md text-black flex text-sm font-medium gap-1 px-3 py-2">
-            {Icon && <Icon />} <span class="lg:text-base">{name}</span>
+          <li class="items-center bg-gray-100 rounded-md text-gray-400 flex text-sm gap-1 px-3 py-2">
+            {Icon && <Icon />} <span class="text-xs">{name}</span>
           </li>
-        )
+        );
       })
     }
   </ul>

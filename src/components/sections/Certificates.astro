@@ -4,24 +4,20 @@ import { certificates } from "@cv"
 ---
 
 <Section title="Certificados">
-  <ul class="flex flex-col">
+  <ul class="flex flex-col gap-4">
     {
-      certificates.map(({ name, date, issuer, summary }) => {
-        const startYear = new Date(date).getFullYear()
+      certificates.map(({ name, issuer, summary }) => {
         return (
           <li>
             <article>
-              <header class="flex justify-between items-start">
+              <header class="flex">
                 <div>
-                  <h3 class="font-bold mt-2 text-lg text-gray-500 lg:text-xl">{name}</h3>
+                  <h3 class="font-bold mt-2 text-gray-500 text-xl">{name}</h3>
+                  <p class="font-semibold text-gray-400 text-base">{issuer}</p>
                 </div>
-
-                <time class="text-gray-400 text-base lg:text-xl">{startYear}</time>
               </header>
-
               <footer>
-                <p class="mt-2 font-semibold text-gray-400 lg:text-xl">{issuer}</p>
-                <p class="mt-2 lg:text-xl">{summary}</p>
+                <p class="text-sm mt-2">{summary}</p>
               </footer>
             </article>
           </li>
@@ -30,12 +26,3 @@ import { certificates } from "@cv"
     }
   </ul>
 </Section>
-
-<style>
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>

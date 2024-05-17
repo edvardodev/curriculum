@@ -133,6 +133,20 @@
       ]
     },    
     {
+      "name": "PHP",
+      "level": "Avanzado",
+      "keywords": [
+        "Lenguaje de programación", "Backend", "Desarrollo web", "Servidor"
+      ]
+    },
+    {
+      "name": "Laravel",
+      "level": "Avanzado",
+      "keywords": [
+        "Framework de PHP", "Desarrollo web", "Backend", "MVC", "ORM"
+      ]
+    },
+    {
       "name": "MySQL",
       "level": "Avanzado",
       "keywords": [
@@ -159,21 +173,7 @@
       "keywords": [
         "Control de Versiones", "Colaboración", "Código Fuente", "Git"
       ]
-    },
-    {
-        "name": "PHP",
-        "level": "Avanzado",
-        "keywords": [
-          "Lenguaje de programación", "Backend", "Desarrollo web", "Servidor"
-        ]
-      },
-      {
-        "name": "Laravel",
-        "level": "Avanzado",
-        "keywords": [
-          "Framework de PHP", "Desarrollo web", "Backend", "MVC", "ORM"
-        ]
-      }
+    }
   ],
   "languages": [
     {

@@ -8,7 +8,7 @@ import { work } from "@cv"
   <ul class="flex flex-col gap-4">
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({ name, startDate, endDate, position, summary }) => {
           const startYear = new Date(startDate).getFullYear()
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : "Actual"
@@ -18,19 +18,19 @@ import { work } from "@cv"
               <article>
                 <header class="flex justify-between items-end">
                   <div>
-                    <h3 class="font-bold mt-2 text-lg text-gray-500 lg:text-xl">{name}</h4>
-                    <p class="mt-2 font-semibold text-gray-400 lg:text-xl">{position}</p>
+                    <h3 class="font-bold mt-2 text-gray-500 text-xl">{name}</h4>
+                    <p class="font-semibold text-gray-400 text-base">{position}</p>
                   </div>
                   <div>
                     <time
-                      class="text-gray-400 text-base min-w-25 cursor-default lg:text-xl" 
+                      class="text-gray-400 min-w-25 cursor-default text-xs" 
                       datetime={startDate}
                       data-title={startDate}>
                         {startYear}
                     </time>
                     {" - "}
                     <time
-                      class="text-gray-400 text-base min-w-25 cursor-default lg:text-xl" 
+                      class="text-gray-400 min-w-25 cursor-default text-xs" 
                       datetime={endDate}
                       data-title={endDate}>
                         {endYear}
@@ -39,7 +39,7 @@ import { work } from "@cv"
                 </header>
 
                 <footer>
-                  <p class="mt-2 lg:text-xl">{summary}</p>
+                  <p class="text-sm mt-2">{summary}</p>
                 </footer>
               </article>
             </li>

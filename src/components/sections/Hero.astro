@@ -1,41 +1,41 @@
 ---
-import { basics } from "@cv"
-import Section from "@/components/Section.astro"
-import Mail from "@/icons/Mail.astro"
-import Phone from "@/icons/Phone.astro"
-import X from "@/icons/X.astro"
-import LinkedIn from "@/icons/LinkedIn.astro"
-import GitHub from "@/icons/GitHub.astro"
-import type { SocialIcon } from "@/types"
+import { basics } from "@cv";
+import Section from "@/components/Section.astro";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import GitHub from "@/icons/GitHub.astro";
+import type { SocialIcon } from "@/types";
 
-const { name, label, image, location, profiles, phone, email, url, availability } = basics
-const { city, region } = location
+const {
+  name,
+  label,
+  image,
+  profiles,
+  phone,
+  email,
+} = basics;
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
-  LinkedIn,
-  X,
-}
-
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
-const linkedUrl = linkedInfo?.url
-
-const printInfo = [email, phone, linkedUrl, url].filter(Boolean).join(" • ")
+  LinkedIn
+};
 ---
 
 <Section>
-  <div class="flex flex-row items-center justify-between gap-4">
-    <div class="flex flex-col pr-8">
-      <h1 class="font-bold text-3xl lg:text-5xl">{name}</h1>
-      <h2 class="font-semibold text-gray-500 text-md text-balance lg:text-3xl mt-2 no-print">{label}</h2>
-      <footer class="print">
-        {printInfo}
-      </footer>
-      <footer class="no-print text-gray-500 text-lg flex gap-3 mt-2">
+  <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
+    <div class="flex flex-col pr-8 items-center lg:items-start">
+      <h1 class="flex font-bold text-3xl text-center">{name}</h1>
+      <h2
+        class="font-semibold text-gray-400 text-balance text-lg"
+      >
+        {label}
+      </h2>
+      <footer class="text-gray-500 flex gap-3 mt-1">
         {
           email && (
             <a
-              class="mt-2 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 md:w-12 md:h-12 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
+              class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
               href={`mailto:${email}`}
               title={`Enviar un correo a ${email}`}
               target="_blank"
@@ -48,23 +48,23 @@ const printInfo = [email, phone, linkedUrl, url].filter(Boolean).join(" • ")
         {
           phone && (
             <a
-              class="mt-2 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 md:w-12 md:h-12 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
+              class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
               href={`tel:${phone}`}
               title={`Comunícate al ${phone}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Phone/>
+              <Phone />
             </a>
           )
         }
         {
-          profiles.map(({ network, url, username }) => {
-            const Icon = SOCIAL_ICONS[network]
+          profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network];
 
             return (
               <a
-                class="mt-2 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 md:w-12 md:h-12 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
+                class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
                 href={url}
                 title={`Visita mi ${network}`}
                 target="_blank"
@@ -72,48 +72,23 @@ const printInfo = [email, phone, linkedUrl, url].filter(Boolean).join(" • ")
               >
                 <Icon />
               </a>
-            )
+            );
           })
         }
       </footer>
     </div>
     <figure>
-      <img class="aspect-square object-cover rounded-lg w-48" src={image} alt={`Foto de perfil de ${name}`} />
+      <img
+        class="aspect-square object-cover w-48 lg:w-32 rounded-full"
+        src={image}
+        alt={`Foto de perfil de ${name}`}
+      />
     </figure>
   </div>
 </Section>
 
 <style>
-
-
   footer a {
     transition: all 0.3s ease;
-  }
-
-  @media (width <= 700px) {
-    .container {
-      flex-direction: column-reverse;
-    }
-
-    .info {
-      justify-content: center;
-      align-items: center;
-      padding-right: 0;
-      text-align: center;
-    }
-
-    figure {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h2 {
-      text-wrap: balance;
-    }
-
-    figure {
-      margin: 0 auto;
-    }
   }
 </style>

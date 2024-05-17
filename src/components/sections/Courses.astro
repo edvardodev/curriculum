@@ -10,14 +10,14 @@ import { courses } from "@cv"
         return (
         <li>
             <article>
-              <header class="flex justify-between items-center">
+              <header class="flex">
                 <div>
-                  <h3 class="font-bold mt-2 text-lg text-gray-500 lg:text-xl">{platform}</h3>
+                  <h3 class="font-bold mt-2 text-gray-500 text-xl">{platform}</h3>
+                  <p class="font-semibold text-gray-400 text-base">{typePlatform}</p>
                 </div>
               </header>
               <footer>
-                <p class="mt-2 font-semibold text-gray-400 lg:text-xl">{typePlatform}</p>
-                <p class="mt-2 lg:text-xl">{summary}</p>
+                <p class="text-sm mt-2">{summary}</p>
               </footer>
             </article>
           </li>
