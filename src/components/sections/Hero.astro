@@ -24,9 +24,9 @@ const SOCIAL_ICONS: SocialIcon = {
 <Section>
   <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
     <div class="flex flex-col pr-8 items-center lg:items-start">
-      <h1 class="flex font-bold text-4xl text-center">{shortName}</h1>
+      <h1 class="flex font-bold text-4xl text-center font-sans">{shortName}</h1>
       <h2
-        class="font-semibold text-gray-400 text-balance text-lg"
+        class="text-gray-400 text-balance text-lg mt-2"
       >
         {label}
       </h2>
@@ -34,7 +34,7 @@ const SOCIAL_ICONS: SocialIcon = {
         {
           email && (
             <a
-              class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-12 h-12 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
+              class="mt-1 text-slate-500 inline-flex items-center justify-center border-[1px] border-solid border-gray-200 p-1 w-12 h-12 rounded-md hover:bg-slate-100	hover:border-[1px] hover:border-solid hover:border-gray-200"
               href={`mailto:${email}`}
               title={`Enviar un correo a ${email}`}
               target="_blank"
@@ -50,7 +50,7 @@ const SOCIAL_ICONS: SocialIcon = {
 
             return (
               <a
-                class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-12 h-12 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
+                class="mt-1 text-slate-500 inline-flex items-center justify-center border-[1px] border-solid border-gray-200 p-1 w-12 h-12 rounded-md hover:bg-slate-100	hover:border-[1px] hover:border-solid hover:border-gray-200"
                 href={url}
                 title={`Visita mi ${network}`}
                 target="_blank"
