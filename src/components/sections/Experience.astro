@@ -7,7 +7,7 @@ import { work } from "@cv";
 <Section title="Experiencia laboral">
   <ul class="relative border-s border-gray-200">
     {
-      work.map(({ name, startDate, endDate, position, summary }) => {
+      work.map(({ name, startDate, endDate, position, summary, url }) => {
         const startYear = new Date(startDate).getFullYear();
         const endYear =
           endDate != null ? new Date(endDate).getFullYear() : "Actual";
@@ -16,7 +16,7 @@ import { work } from "@cv";
           <li class="mb-5 ms-4">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white" />
             <h3 class="font-semibold text-gray-400 text-base mt-5 font-sans">
-              {position} en {name}
+              {position} en <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
             </h3>
             <time
               class="text-gray-400 min-w-25 cursor-default text-xs"
