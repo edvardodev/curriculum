@@ -2,17 +2,16 @@
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
 import Mail from "@/icons/Mail.astro";
-import Phone from "@/icons/Phone.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import GitHub from "@/icons/GitHub.astro";
 import type { SocialIcon } from "@/types";
 
 const {
   name,
+  shortName,
   label,
   image,
   profiles,
-  phone,
   email,
 } = basics;
 
@@ -25,7 +24,7 @@ const SOCIAL_ICONS: SocialIcon = {
 <Section>
   <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
     <div class="flex flex-col pr-8 items-center lg:items-start">
-      <h1 class="flex font-bold text-3xl text-center">{name}</h1>
+      <h1 class="flex font-bold text-4xl text-center">{shortName}</h1>
       <h2
         class="font-semibold text-gray-400 text-balance text-lg"
       >
@@ -35,7 +34,7 @@ const SOCIAL_ICONS: SocialIcon = {
         {
           email && (
             <a
-              class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
+              class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-12 h-12 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
               href={`mailto:${email}`}
               title={`Enviar un correo a ${email}`}
               target="_blank"
@@ -46,25 +45,12 @@ const SOCIAL_ICONS: SocialIcon = {
           )
         }
         {
-          phone && (
-            <a
-              class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
-              href={`tel:${phone}`}
-              title={`Comunícate al ${phone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Phone />
-            </a>
-          )
-        }
-        {
           profiles.map(({ network, url }) => {
             const Icon = SOCIAL_ICONS[network];
 
             return (
               <a
-                class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-8 h-8 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
+                class="mt-1 text-gray-400 inline-flex items-center justify-center border-[1px] border-solid border-gray-100 p-1 w-12 h-12 rounded-md hover:bg-gray-200	hover:border-[1px] hover:border-solid hover:border-gray-100"
                 href={url}
                 title={`Visita mi ${network}`}
                 target="_blank"
