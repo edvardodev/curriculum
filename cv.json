@@ -56,12 +56,12 @@
     {
       "platform": "Platzi",
       "typePlatform": "Plataforma de cursos online",
-      "summary": "En esta plataforma, aprendí los fundamentos de la programación, adquirí un dominio sólido en JavaScript, destacándome en el uso de React.js y Astro para la creación de interfaces de usuario dinámicas y eficientes. Además, me adentré en el desarrollo web con PHP y exploré su sintaxis, especialmente con el framework Laravel. Integré estas habilidades con herramientas como Tailwind y Bootstrap para un diseño web moderno y adaptable. En cuanto a la gestión de datos, trabajé con bases de datos tanto MySQL como PostgreSQL. También perfeccioné mis habilidades en control de versiones con Git y GitHub,"
+      "summary": "En esta plataforma, aprendí los fundamentos de la programación, adquirí un dominio sólido en JavaScript, destacándome en el uso de React.js y Astro. Además, me adentré en el desarrollo web con PHP y con Laravel. Integré estas habilidades con herramientas como Tailwind y Bootstrap. En cuanto a la gestión de datos, trabajé con bases de datos tanto MySQL como PostgreSQL. También perfeccioné mis habilidades en control de versiones con Git y GitHub,"
     },
     {
       "platform": "Udemy",
       "typePlatform": "Plataforma de cursos online",
-      "summary": "A través de Udemy, fortalecí mis habilidades en JavaScript y PHP, centrándome en el desarrollo web con énfasis en JavaScript y sus frameworks. Especializado en React.js y en la manipulación eficiente del DOM. Además, adquirí experiencia en Linux (Ubuntu), empleando sus herramientas para el desarrollo web, la administración de servidores y la configuración de entornos de desarrollo. En PHP, los cursos me brindaron una comprensión avanzada del lenguaje, incluyendo el manejo de sesiones, validación de formularios e interacción con bases de datos MySQL."
+      "summary": "A través de Udemy, fortalecí mis habilidades en JavaScript y PHP, centrándome en el desarrollo web. Además, adquirí experiencia en Linux (Ubuntu) y en PHP, los cursos me brindaron una comprensión avanzada del lenguaje, incluyendo el manejo de sesiones, validación de formularios e interacción con bases de datos MySQL."
     }
   ],
   "certificates": [
@@ -70,7 +70,7 @@
       "date": "2023-12-15",
       "issuer": "Cisco",
       "url": "https://www.credly.com/badges/2493bbdb-becf-44be-94bf-1a2f104911ce/linked_in_profile",
-      "summary": "IT Essentials, es una certificación ofrecida por Cisco, proporciona una base sólida en conceptos fundamentales de tecnología de la información y habilidades prácticas necesarias. Cubriendo temas como hardware, software, redes y seguridad."
+      "summary": "IT Essentials, es una certificación ofrecida por Cisco, proporciona una base sólida en conceptos fundamentales de tecnología de la información. Cubriendo temas como hardware, software, redes y seguridad."
     }
   ],
   "skills": [
