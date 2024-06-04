@@ -80,19 +80,19 @@
       "name": "CSS"
     },
     {
-      "name": "JavaScript"
-    },
-    {
       "name": "Tailwind"
     },
     {
       "name": "Bootstrap"
     },
     {
-      "name": "TypeScript"
+      "name": "JavaScript"
     },
     {
       "name": "AstroJs"
+    },
+    {
+      "name": "TypeScript"
     },
     {
       "name": "PHP"
@@ -111,6 +111,9 @@
     },
     {
       "name": "GitHub"
+    },
+    {
+      "name": "VSCode"
     }
     ],
     "languages": [
